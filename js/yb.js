@@ -47,7 +47,7 @@ $("form").on("submit",function(e){
 			if(data.length>0){
 				linkvideo=data[data.length-1].url;
 				titlevideo=data[data.length-1].titleclear;
-				$taiday.next().append("<br><span id='pseudo-download'><a download href='"+linkvideo+"&title="+titlevideo+"' target='_self'>Tải video</a></span>");
+				$taiday.next().append("<br><span id='pseudo-download'><a href='"+linkvideo+"&title="+titlevideo+"' target='_blank'>Tải video</a></span>");
 			}else{
 				console.log(data);
 			}
