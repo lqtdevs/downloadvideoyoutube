@@ -1,0 +1,132 @@
+body {
+	margin: 0px auto;
+	padding: 0px;
+}
+div#content {
+	margin: 0px auto;
+	padding: 0px;
+	background: fff;
+	width: 90%;
+	min-height:250px;
+}
+
+ul#ul-video-items {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: table;
+	content: '';
+	clear: both;
+	text-align: center;
+}
+
+ul#ul-video-items li.li-item {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10px;
+	border-top: 5px solid #ccc;
+	min-width: 150px;
+	background: #eee;
+	position: relative;
+}
+
+ul#ul-video-items li.li-item h1 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 18pt;
+	color: green;
+	text-shadow: 1px 1px #000;
+}
+
+ul#ul-video-items li.li-item span.box-download #pseudo-download{
+	background: orange;
+	font-size: 50px;
+	display: inline-block;
+	clear: left;
+}
+
+ul#ul-video-items li.li-item span.box-download #pseudo-download a {
+	color: #fff;
+	text-decoration: none;
+}
+
+div#box-search {
+	text-align: center;
+	background: #fff;
+	width: 90%;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+div#box-search #keyword {
+	width: 95%;
+	border: none;
+	padding: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	border-top: 5px solid #4cd;
+}
+
+div#box-search #kiemtra {
+	width: 100%;
+	border: none;
+	padding: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	border-top:2px solid #ddd;
+	border-bottom:2px solid #ddd;
+	color:#4cd;
+	background:#eee;
+	cursor:pointer;
+	margin-top:5px;
+}
+#copyright {
+	text-align: center;
+	background: #ccc;
+	cursor: pointer;
+	height: 35px;
+	font-size: 25px;
+	width: 250px;
+	margin: 0px auto;
+	margin-top: 20px;
+	border-top: 5px solid #4cd;
+}
+
+
+li.next-prev-item {
+	min-height:50px;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10px;
+	border-top: 5px solid #ccc;
+	min-width: 150px;
+	background: #eee;
+	position: relative;
+}
+li.next-prev-item a.nextvideo{
+	font-size:30px;
+	background:#ccc;
+	margin-left:10px;
+	border-bottom:2px solid #aaa;
+	border-bottom-left-radius:10px;
+	text-decoration:none;
+	padding:5px;
+	color:blue;
+	text-shadow: 1px 1px #000;
+}
+button{
+border:5px solid #bcd;
+	background:#4cd;
+	color:white;
+	font-family: cursive;
+	font-size:50px;
+	margin-top:50px;
+	cursor:pointer;	
+}
+
+div#content-box-error {
+text-align:center;
+	color:#4cd;
+}
