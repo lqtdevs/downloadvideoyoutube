@@ -1,7 +1,27 @@
 body {
 	margin: 0px auto;
+	margin-top:20px;
 	padding: 0px;
 }
+div#title-top{
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10px;
+	border-top: 5px solid #4cd;
+	min-width: 150px;
+	background: #ccc;
+}
+div#title-top h1 {
+	margin: 0px auto;
+	margin-bottom:15px;
+	padding: 0px;
+	background: fff;
+	width: 90%;
+	font-size: 15px;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+}
+
 div#content {
 	margin: 0px auto;
 	padding: 0px;

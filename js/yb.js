@@ -34,14 +34,24 @@ $("form").on("submit",function(e){
 
 	});
 
-	$("#content").on("click","img",function(e){
+	$("#content").on("click","a.load-link-download",function(e){
 		$(".box-download").html("");
-		var $id = $(this).attr("rel").trim();
+		$(this).next().append("<br><span id='duocganvao'>Đang tải...<span>");
+		var $id = $(this).attr("href").trim();
 		var $taiday=$(this);
 		$.post($urldownload,{id:$id},function(dt){
-			//console.log($.parseJSON(dt));
+			$("#duocganvao").remove();
 			var data=$.parseJSON(dt);
-			$taiday.next().append("<br><span id='pseudo-download'><a download href='"+data[5].url+"&title="+data[5].titleclear+"' target='_self'>Tải video</a></span>");
+			var linkvideo="";
+			var titlevideo="";
+			if(data.length>0){
+				linkvideo=data[data.length-1].url;
+				titlevideo=data[data.length-1].titleclear;
+				$taiday.next().append("<br><span id='pseudo-download'><a download href='"+linkvideo+"&title="+titlevideo+"' target='_self'>Tải video</a></span>");
+			}else{
+				console.log(data);
+			}
+			
 		});
 		return false;
 
@@ -55,7 +65,6 @@ function searchvideoyoutube ($url) {
 			return false;
 		}else{
 			$.get($url,function(data){
-				console.log(data);
 				var $strcontent="<div id='video-content'><ul id='ul-video-items'>";
 				var $nextPageToken="";
 				var $prevPageToken="";
@@ -64,7 +73,7 @@ function searchvideoyoutube ($url) {
 					var videoid=(data.items[i].id.videoId);
 					$strcontent+="<li class='li-item'>";
 					$strcontent+="<h1>"+$snippet.title+"</h1>";
-					$strcontent+="<img border='0' rel='"+videoid+"' src='http://i2.ytimg.com/vi/"+videoid+"/0.jpg' height='150px' width='150px'/><span class='box-download'></span>";
+					$strcontent+="<a class='load-link-download' href='"+videoid+"'><img border='0' src='http://i2.ytimg.com/vi/"+videoid+"/0.jpg' height='150px' width='150px'/></a><span class='box-download'></span>";
 					$strcontent+="</li>";
 				};
 				((data.nextPageToken))?($nextPageToken=(data.nextPageToken)):null;
@@ -88,5 +97,4 @@ function searchvideoyoutube ($url) {
 
 function loadlai(){
 		window.location.href='';
-		//alert("đã load lại");
 	}
